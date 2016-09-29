@@ -1,0 +1,134 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background-color: black;
+}
+
+i {
+  float: left;
+  padding-top: 2px;
+}
+
+
+.signup-login-form__btn-xl {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-left: 27px !important;
+  padding-right: 27px !important;
+  font-weight: normal;
+}
+.space-1 {
+  margin-bottom: 6px;
+}
+#signup-modal.btn-block {
+  display: block;
+  white-space: normal;
+  width: 100%;
+}
+
+#signup-modal.btn {
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+}
+#signup-modal.btn-large {
+  padding: 9px 27px;
+  font-size: 16px;
+}
+#signup-modal.btn {
+  padding: 7px 21px;
+  font-size: 14px;
+}
+#signup-modal.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 1.43;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.signup-login-form__switch-copy {
+  padding-top: 15px;
+  vertical-align: middle;
+}
+
+.navbar {
+  background-color: black;
+  color: #CCCCCC;
+}
+
+.signup-or-separator {
+  background: none;
+  height: 34px;
+  position: relative;
+  text-align: center;
+}
+
+.input-group {
+  padding: 5px 0;
+}
+
+.modal-body.form-group, .form-inline, .input-group {
+  margin-bottom: 5px !important;
+  padding: 0 !important;
+}
+
+.hero__content-footer {
+  background-color: #000;
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.badge-notify{
+  background: #F05F40;;
+  position: relative;
+  top: -46px;
+  left: 36px;
+}
+
+.messages {
+  font-size: 36px;
+  background-color: black;
+  display: block;
+  margin: 0px;
+}
+
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.SearchForm__inputs-wrapper {
+  position: relative;
+  padding-right: 0;
+}
+
+.search_icon {
+  background-color: darkgrey;
+}
+
+.saerchbar {
+  margin: 20px 30px;
+}
+

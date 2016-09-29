@@ -1,0 +1,37 @@
+<div id="page-wrapper">
+  <h4>Earn some money by becoming a tutor and helping other students.</h4>
+  <div class="btn-group center">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Select a Department <span class="caret"></span></button>
+      <ul class="dropdown-menu scrollable-menu" role="menu">
+        <% @subjects.each do |subject| %>
+            <li><a href="/become_a_tutor/<%= subject.id %>" ><%= subject.name %></a></li>
+      <% end %>
+      </ul>
+  </div>
+
+  <% if !@courses.nil? && !@courses.empty? %>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Sign Up</th>
+      </tr>
+      </thead>
+
+      <% @courses.each do |course|%>
+          <tbody>
+          <tr>
+            <% subject = Subject.find(course.subject_id) %>
+            <% code = subject.code%>
+            <td><%= code %> <%=  course.number%></td>
+            <td><%= course.name %></td>
+            <td><%= subject.name %></td>
+            <td><a href="/become_a_tutor/<%= subject.id %>/<%= course.id %>" >Tutor ME!</a></td>
+          </tr>
+          </tbody>
+      <%end%>
+    </table>
+  <%end%>
+  </div>

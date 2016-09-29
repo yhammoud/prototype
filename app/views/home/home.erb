@@ -1,0 +1,27 @@
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1 id="homeHeading">Find a tutor that can help you now.</h1>
+      <hr>
+      <p>Find a fellow student near you now that has already taken the class to help you go through it.</p>
+      <a href="" class="btn btn-primary btn-xl">Find Out More</a>
+      <% if current_user %>
+          <div class="input-group input-group-lg saerchbar">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default search_icon" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+
+</header>
+
+<script>
+  $('input.typeahead').typeahead([
+    {
+      prefetch: '/search_suggestions'
+    }]);
+</script>
