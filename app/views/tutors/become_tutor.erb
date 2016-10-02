@@ -28,10 +28,22 @@
             <td><%= code %> <%=  course.number%></td>
             <td><%= course.name %></td>
             <td><%= subject.name %></td>
-            <td><a href="/become_a_tutor/<%= subject.id %>/<%= course.id %>" >Tutor ME!</a></td>
+            <% if !Tutor.where(user_id: current_user.id).first.nil? %>
+                <% @tutor =  Tutor.where(user_id: current_user.id).first%>
+                <% if TutorCourse.where(course_id: course.id, tutor_id: @tutor.id).first.nil? %>
+                  <td><a href="/become_a_tutor/<%= subject.id %>/<%= course.id %>" >Tutor ME!</a></td>
+                <% else %>
+                    <td><a href="/become_a_tutor/<%= subject.id %>/<%= course.id %>">Manage</a></td>
+                <%end%>
+          <% else %>
+                <td><a href="/become_a_tutor/<%= subject.id %>/<%= course.id %>">Tutor ME!</a></td>
+            <%end%>
           </tr>
           </tbody>
       <%end%>
     </table>
   <%end%>
+
+
   </div>
+

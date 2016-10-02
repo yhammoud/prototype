@@ -1,0 +1,29 @@
+<div id="page-wrapper">
+  <h4>Become a tutor for...</h4>
+  <% @course = Course.find(params[:id]) %>
+  <% @code = Subject.find(@course.subject_id).code%>
+  <h2><%= @code%> <%= @course.number%></h2>
+
+  <%= form_for :tutor, html: { multipart: true }, method: 'post', url: '/signup_tutor' do |f| %>
+      <%= hidden_field(:course, :id, :value => @course.id) %>
+
+      <div class="input-group input-group-lg">
+        <%= text_area(:tutor, :bio, cols: 100, row: 500,class: 'form-control input-lg', placeholder: "What is your experience with this course? Strength, weaknesses?") %>
+      </div>
+      <div class="form-inline">
+        <%= text_field(:tutor, :major, class: 'form-control input-lg', placeholder: "Major") %>
+        <%= text_field(:tutor, :grade, class: 'form-control input-lg', placeholder: "Grade") %>
+      </div>
+
+      <%= f.submit "Sign Up", class: "btn btn-block signup-login-form__btn-xl btn-primary btn-large"%>
+
+      <div id="tos_outside" class="space-top-3">
+        <small>
+          By signing up, I agree to our <a href="" data-popup="true">Terms of Service</a>, <a href="" data-popup="true">Payments Terms of Service</a>, <a href="" data-popup="true">Privacy Policy</a>, <a href="" data-popup="true">Guest Refund Policy</a>, and <a href="" data-popup="true">Host Guarantee Terms</a>.
+        </small>
+
+      </div>
+      </div>
+
+  <% end %>
+  </div>

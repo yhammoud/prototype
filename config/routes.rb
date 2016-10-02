@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   get '/become_a_tutor' => 'tutors#new'
   get '/become_a_tutor/:id' => 'tutors#courses_for_department'
+  get '/become_a_tutor/:id/:id' => 'tutors#tutor_course_signup'
+  post '/signup_tutor' => 'tutors#signup_tutor'
+
+
   post '/signup' => "users#create"
 
   post '/login' => 'sessions#create'
