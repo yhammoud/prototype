@@ -4,14 +4,15 @@ Rails.application.routes.draw do
 
 
   get '/home' => "home#new"
-  get '/search_suggestions' => 'home#load_suggestions'
+  get '/about' => "home#about"
+  get '/search_suggestions' => 'home#search_suggestion'
+
 
   get '/become_a_tutor' => 'tutors#new'
   get '/become_a_tutor/:id' => 'tutors#courses_for_department'
   get '/become_a_tutor/:id/:id' => 'tutors#tutor_course_signup'
   post '/signup_tutor' => 'tutors#signup_tutor'
-
-
+  get '/manage_course/:id' => 'tutors#manage_course'
   post '/signup' => "users#create"
 
   post '/login' => 'sessions#create'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002055209) do
+ActiveRecord::Schema.define(version: 20161005033305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +21,13 @@ ActiveRecord::Schema.define(version: 20161002055209) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "number"
     t.string   "name"
     t.integer  "subject_id"
+    t.string   "code_number"
+    t.index ["code_number"], name: "index_courses_on_code_number", unique: true, using: :btree
     t.index ["subject_id"], name: "index_courses_on_subject_id", using: :btree
   end
 

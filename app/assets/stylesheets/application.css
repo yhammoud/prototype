@@ -15,4 +15,7 @@
  *= require bootstrap.min
  *= require font-awesome.min
  *= require footer-distributed-with-address-and-phones
+ *= require bootstrap-datepicker
+ *= require jquery-ui
+
  */

@@ -1,0 +1,6 @@
+<div id="page-wrapper">
+  <% @course = Course.find(params[:id]) %>
+  <% @code = Subject.find(@course.subject_id).code%>
+  <h2>Manage tutoring <%= @code%> <%= @course.number%></h2>
+
+  </div>

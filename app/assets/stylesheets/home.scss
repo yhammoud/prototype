@@ -18,6 +18,8 @@ h3 {
   margin: 0;
 }
 
+
+
 .signup-login-form__btn-xl {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
@@ -113,6 +115,9 @@ h3 {
 }
 
 .messages {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  max-height: 50px;
   font-size: 36px;
   background-color: black;
   display: block;
@@ -129,11 +134,83 @@ h3 {
   padding-right: 0;
 }
 
+
+.manage {
+  color: white;
+  background-color: forestgreen !important;
+  border-color: green !important;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.manage:hover,
+.manage:focus,
+.manage.active {
+  color: white;
+  background-color: green !important;
+  border-color: darkgreen !important;
+}
+
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+
+.date {
+
+  height: 50px;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  float: left;
+  margin: auto;
+
+}
 .search_icon {
   background-color: darkgrey;
+  height: 50px !important;
+  width: 50px !important;
+  float: left;
+  border: 0px;
+  padding: 0;
+  margin: auto;
+  border-bottom-right-radius: 30px !important;
+  border-top-right-radius: 30px !important;
 }
 
-.saerchbar {
-  margin: 20px 30px;
+.icon {
+  height: 50px;
 }
 
+
+.searchbar {
+  width:50% !important;
+  margin: auto;
+  height: 50px !important;
+  border-bottom-left-radius: 30px !important;
+  border-top-left-radius: 30px !important;
+  float: left;
+}
+.center {
+  margin-top: 50px;
+}
+.loggedin li {
+  max-height: 50px;
+}
+
+.home {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: none !important;
+}

@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require bootstrap.min
 //= require typeahead.bundle.min
+//= require bootstrap-datepicker
+
 //= require_tree .

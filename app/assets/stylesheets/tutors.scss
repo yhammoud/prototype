@@ -18,7 +18,7 @@
 }
 
 .center {
-  margin: 15px auto;
+  margin: 50px auto;
   width: 50%;
   display: flex;
 }
@@ -90,4 +90,8 @@ fieldset[disabled] .btn-primary.active {
 
 .table th {
   text-align: center;
+}
+
+.inline {
+  display: inline !important;
 }

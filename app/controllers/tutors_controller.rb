@@ -17,6 +17,9 @@ class TutorsController < ApplicationController
     render :become_tutor
   end
 
+  def manage_course
+    render :manage_course
+  end
 
 
   def signup_tutor
