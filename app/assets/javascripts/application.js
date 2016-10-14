@@ -17,5 +17,7 @@
 //= require bootstrap.min
 //= require typeahead.bundle.min
 //= require bootstrap-datepicker
+//= require bootstrap-switch.min
+
 
 //= require_tree .

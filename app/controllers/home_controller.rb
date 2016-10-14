@@ -31,6 +31,12 @@ class HomeController < ApplicationController
     end
   end
 
+  def search_course
+    course_id = Course.find_by_code_number(params[:search][:course]).id
+
+    redirect_to '/view_tutors_for_course/' + course_id.to_s
+  end
+
 
 
   private

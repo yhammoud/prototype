@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout :determine_layout
+
   def new
 
   end
@@ -17,6 +19,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def user_profile
+    render :user_profile
+  end
 
   def user_params
     user_modified_params =  params.require(:user).permit(:first_name, :last_name, :password, :password_confirmation)
@@ -25,4 +30,12 @@ class UsersController < ApplicationController
     return user_modified_params
   end
 
+  def edit_user
+    render :user_profile
+  end
+
+  private
+  def determine_layout
+    current_user ? "logged_in" : "application"
+  end
 end

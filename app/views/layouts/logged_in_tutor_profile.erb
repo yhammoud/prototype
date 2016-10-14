@@ -31,15 +31,15 @@
         <li>
           <% if !Tutor.where(user_id: current_user.id).first.nil?%>
               <a href="/tutor_overview">Tutoring</a>
-        <% else %>
+          <% else %>
               <a href="/become_a_tutor">Become a Tutor</a>
           <% end %>
         </li>
         <li>
-            <button class="btn btn-default btn-link messages">
-              <i class="fa fa-envelope-o"></i>
-            </button>
-            <span class="badge badge-notify">3</span>
+          <button class="btn btn-default btn-link messages">
+            <i class="fa fa-envelope-o"></i>
+          </button>
+          <span class="badge badge-notify">3</span>
         </li>
         <li>
           <a href="/about">About</a>
@@ -61,10 +61,45 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
+<div id="content-wrapper">
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar tutormenu">
+
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu tutormenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+                <i class="glyphicon glyphicon-home"></i>
+                Overview </a>
+            </li>
+            <li>
+              <a href="/courses_for_tutor">
+                <i class="glyphicon glyphicon-user"></i>
+                Courses </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="glyphicon glyphicon-ok"></i>
+                Calender </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                History </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <%= yield %>
+  </div>
+</div>
 
 
 
-<%= yield %>
 </body>
 <footer class="footer-distributed">
 
@@ -125,5 +160,4 @@
   </div>
 
 </footer>
-
 </html>

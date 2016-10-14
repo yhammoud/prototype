@@ -1,0 +1,106 @@
+<div class="col-md-9">
+  <% @course = Course.find(params[:id]) %>
+  <% @code = Subject.find(@course.subject_id).code%>
+
+
+  <form class="form-horizontal">
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend style="color: lightgray">Availability</legend>
+
+      <!-- Multiple Radios (inline) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="radios">Instant Booking</label>
+        <div class="col-md-3">
+          <input type="checkbox" name="my-checkbox" checked data-size="small">
+        </div>
+      </div>
+
+      <!-- Time Range input-->
+      <div class="form-inline">
+        <label class="col-md-4 control-label" for="">Availability</label>
+          <input id="" name="" type="text" placeholder="From" class="form-control input-md" required="">
+          <input id="" name="" type="text" placeholder="To" class="form-control input-md">
+      </div>
+
+      <!-- Repeat Checkboxes (inline) -->
+      <div class="form-inline">
+        <label class="col-md-4 control-label" for="">Repeat</label>
+          <label class="checkbox-inline" for="-0">
+            <input type="checkbox" name="" id="-0" value="1">
+            M
+          </label>
+          <label class="checkbox-inline" for="-1">
+            <input type="checkbox" name="" id="-1" value="2">
+            T
+          </label>
+          <label class="checkbox-inline" for="-2">
+            <input type="checkbox" name="" id="-2" value="3">
+            W
+          </label>
+          <label class="checkbox-inline" for="-3">
+            <input type="checkbox" name="" id="-3" value="4">
+            Th
+          </label>
+          <label class="checkbox-inline" for="-4">
+            <input type="checkbox" name="" id="-4" value="5">
+            F
+          </label>
+          <label class="checkbox-inline" for="-5">
+            <input type="checkbox" name="" id="-5" value="6">
+            S
+          </label>
+          <label class="checkbox-inline" for="-6">
+            <input type="checkbox" name="" id="-6" value="7">
+            Su
+          </label>
+      </div>
+
+      <!-- Session length input-->
+      <div class="form-inline">
+        <label class="col-md-4 control-label" for="">Session Length</label>
+          <input id="" name="" type="text" placeholder="Minimum 1 hour" class="form-control input-md" required="">
+      </div>
+
+    </fieldset>
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend style="color: lightgray">Pricing</legend>
+
+      <!-- Multiple Radios (inline) -->
+      <div class="form-inline">
+        <label class="col-md-4 control-label" for="radios">Price per session</label>
+        <input id="" name="" type="text" placeholder="Enter $ amount" class="form-control input-md">
+      </div>
+
+      <!-- Time Range input-->
+      <div class="form-inline">
+        <label class="col-md-4 control-label" for="radios">Cancellation Policy</label>
+          <label class="radio-inline" for="radios-0">
+            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+            Flexible
+          </label>
+          <label class="radio-inline" for="radios-1">
+            <input type="radio" name="radios" id="radios-1" value="2">
+            Moderate
+          </label>
+          <label class="radio-inline" for="radios-2">
+            <input type="radio" name="radios" id="radios-2" value="3">
+            Strict
+          </label>
+      </div>
+
+
+    </fieldset>
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend style="color: lightgray">Rules</legend>
+
+
+
+    </fieldset>
+  </form>
+  </div>

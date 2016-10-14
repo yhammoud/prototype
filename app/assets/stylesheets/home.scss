@@ -178,7 +178,7 @@ video {
 
 }
 .search_icon {
-  background-color: darkgrey;
+  background-color: dimgrey;
   height: 50px !important;
   width: 50px !important;
   float: left;
@@ -213,4 +213,8 @@ video {
   padding-top: 5px;
   padding-bottom: 5px;
   text-transform: none !important;
+}
+
+.navbar-right .dropdown-menu {
+  left: 0 !important;
 }

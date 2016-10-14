@@ -1,0 +1,140 @@
+<!--
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+
+<div id="content-wrapper">
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img src="<%=image_path('user-male.png')%>" class="img-responsive" alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= current_user.first_name %> <%= current_user.last_name %>
+          </div>
+          <div class="profile-usertitle-job">
+            Computer Science - 2016
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <a href="/edit_user">Edit</a>
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+                <i class="glyphicon glyphicon-home"></i>
+                Overview </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-user"></i>
+                Tutoring History </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="glyphicon glyphicon-ok"></i>
+                Tasks </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                Help </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9">
+        <h2>Overview</h2>
+
+        <div class="row">
+
+          <!-- edit form column -->
+          <div class="col-md-9 personal-info">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">First name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" type="text" value="Jane">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Last name:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" type="text" value="Bishop">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Company:</label>
+                <div class="col-lg-8">
+                  <input class="form-control" type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Email:</label>
+                <div class="col-lg-8">
+                  <%= text_field(:user, :email, class: 'form-control', placeholder: "Email") %>
+                  <span class="input-group-addon" id="basic-addon2">@gatech.edu</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Time Zone:</label>
+                <div class="col-lg-8">
+                  <div class="ui-select">
+                    <select id="user_time_zone" class="form-control">
+                      <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                      <option value="Alaska">(GMT-09:00) Alaska</option>
+                      <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                      <option value="Arizona">(GMT-07:00) Arizona</option>
+                      <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                      <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                      <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                      <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Username:</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" value="janeuser">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Password:</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="password" value="11111122333">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Confirm password:</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="password" value="11111122333">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                  <input type="button" class="btn btn-primary" value="Save Changes">
+                  <span></span>
+                  <input type="reset" class="btn btn-default" value="Cancel">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

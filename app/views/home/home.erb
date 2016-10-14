@@ -11,16 +11,19 @@
       <p>Find a fellow student near you now that has already taken the class to help you go through it.</p>
       <a href="" class="btn btn-primary btn-xl">Find Out More</a>
       <% if current_user %>
+
+          <%= form_for :search, method: 'get', url: '/search_course' do |f| %>
           <div class="input-group input-group-lg center">
             <div class="input-group inline">
-            <input type="text" class="form-control searchbar" id="search" placeholder="Search for...">
+              <%= text_field(:search, :course, class: 'form-control searchbar', placeholder: "Search for course...") %>
               <div class="input-group date">
-                <input type="text" class="form-control date" data-provide='datepicker' placeholder="Date">
+                <%= text_field(:search, :date, class: 'form-control date', placeholder: "Date", data: {:provide => 'datepicker'}) %>
               </div>
             <span class="input-group-btn">
-              <button class="btn btn-default search_icon" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <%= f.submit "Search", class: 'btn btn-default search_icon' %>
             </span>
           </div>
+          <% end %>
       <% end %>
     </div>
   </div>
@@ -29,7 +32,7 @@
 </header>
 
 <script>
-  $( "#search" ).autocomplete({
+  $( ".searchbar" ).autocomplete({
     source: '/search_suggestions'
   });
 </script>

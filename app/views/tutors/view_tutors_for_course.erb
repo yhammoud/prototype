@@ -1,0 +1,39 @@
+<div id="page-wrapper">
+
+  <% course = Course.find(params[:id]).code_number %>
+  <h4>Tutors for <%= course%></h4>
+        <% @tutors.each do |tutor|%>
+            <% user = User.find(tutor.user_id) %>
+            <div class="media block-update-card">
+              <a class="pull-left" href="#">
+                <img class="media-object update-card-MDimentions" src="http://3.bp.blogspot.com/-IbEOTNtCMyU/TfCAdHaAxEI/AAAAAAAAA8U/EATib38SSAM/s320/joe-mcelderry.jpg" alt="...">
+              </a>
+              <div class="media-body update-card-body">
+                <h4 class="media-heading"><%= user.first_name %> <%= user.last_name %></h4>
+                <div class="btn-toolbar card-body-social" role="toolbar">
+                  <div class="btn-group fa fa-github-alt git"></div>
+                  <div class="btn-group linkedin fa fa-linkedin-square"></div>
+                  <div class="btn-group twitter fa fa-twitter"></div>
+                  <div class="btn-group facebook fa fa-facebook"></div>
+                  <div class="btn-group google-plus fa fa-google-plus"></div>
+                </div>
+              </div>
+              <div class="block-update-card status">
+                <div class="update-card-body">
+                  <div class="update-card-body">
+                    <p>This is me. I am a Good Boy.This is the body content of this media.This can be
+                      used as an update panel.</p>
+                  </div>
+                </div>
+                <div class="card-action-pellet btn-toolbar pull-right" role="toolbar">
+                  <div class="btn-group fa fa-mail-reply"></div>
+                  <div class="btn-group fa fa-map-marker"></div>
+                  <div class="btn-group fa fa-magic"></div>
+                  <div class="btn-group fa fa-photo"></div>
+                </div>
+              </div>
+            </div>
+
+
+  <% end %>
+</div>

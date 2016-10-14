@@ -17,10 +17,21 @@ class TutorsController < ApplicationController
     render :become_tutor
   end
 
-  def manage_course
-    render :manage_course
+
+  def view_tutors_for_course
+    tutor_course = TutorCourse.where(course_id: params[:id])
+    @tutors = []
+    tutor_course.each do |tutor|
+      @tutors.push(Tutor.find(tutor.tutor_id))
+    end
+    render :view_tutors_for_course
   end
 
+  def delete_course_for_tutor
+    tutor_id = Tutor.find_by_user_id(current_user.id).id
+    TutorCourse.delete_all(:course_id => params[:course_id] ,:tutor_id => tutor_id)
+    redirect_to '/courses_for_tutor'
+  end
 
   def signup_tutor
     @user = User.find(current_user.id)
@@ -33,6 +44,7 @@ class TutorsController < ApplicationController
 
     redirect_to :become_a_tutor
   end
+
 
   private
   def determine_layout

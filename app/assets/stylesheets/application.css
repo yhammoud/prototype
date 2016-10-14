@@ -17,5 +17,6 @@
  *= require footer-distributed-with-address-and-phones
  *= require bootstrap-datepicker
  *= require jquery-ui
+ *= require bootstrap-switch.min
 
  */

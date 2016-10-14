@@ -1,0 +1,30 @@
+<div class="col-md-9">
+  <% if !@courses.nil? && !@courses.empty? %>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Options</th>
+        </tr>
+        </thead>
+
+        <% @courses.each do |course|%>
+            <tbody>
+            <tr>
+              <% subject = Subject.find(course.subject_id) %>
+              <% code = subject.code%>
+              <td><%= code %> <%=  course.number%></td>
+              <td><%= course.name %></td>
+              <td><%= subject.name %></td>
+              <td>
+                <a href="/manage_course/<%= course.id %>" class="btn btn-primary btn-sm manage">Manage</a>
+                <a href="/delete_course_for_tutor/<%= course.id %>" class="btn btn-danger btn-sm">Delete</a>
+              </td>
+            </tr>
+            </tbody>
+        <%end%>
+      </table>
+  <%end%>
+</div>
